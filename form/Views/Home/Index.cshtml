@@ -1,0 +1,44 @@
+﻿@model Form
+{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        Crear Contacto
+    </div>
+    <div class="card-body">
+        
+        <form  method="post">
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label"></label>
+                <input asp-for="Nombre" type="text" class="form-control"  placeholder="Escribir Nombre" >
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+                
+            </div>
+            <div class="mb-3">
+                <label asp-for="Apellido" class="form-label"></label>
+                <input asp-for="Apellido" type="text" class="form-control"  placeholder="Escribir Nombre" >
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+                
+            </div>
+            <div class="mb-3">
+                <label asp-for="Correo" class="form-label"></label>
+                <input asp-for="Correo" type="email" class="form-control"  placeholder="Escribir Correo" >
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Calendario" class="form-label"></label>
+                <input asp-for="Calendario" type="date" class="form-control" >
+                <span asp-validation-for="Calendario" class="text-danger"></span>
+            </div>
+            
+            <button type="submit" id="botonGuardar" onclick="datos(event)" value="mostar" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+</div>
